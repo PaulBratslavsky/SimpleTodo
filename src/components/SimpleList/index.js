@@ -52,11 +52,13 @@ const SimpleList = ({
     <SimpleListStyled>
       {list.map((item) => (
         <li key={item.id}>
-          <p>Task: {item.task}</p>
+          <p>Item ID: {item.id}</p>
           <p>Importance: {item.importance}</p>
+          <p>Task: {item.name}</p>
+          <p>Item Completed: {item.completed ? 'yes' : 'no'}</p>
           <p>Due Date: {item.dueDate.toLocaleString()}</p>
           <p>Description: {item.description}</p>
-          <p>Item ID: {item.id}</p>
+          <p>Timestamp: </p>
 
           {completed ? (
             <div className="btn-group">
